@@ -1,0 +1,9 @@
+extends layout.pug
+
+block content
+  .form
+    h1 Edit Task
+    form(action=`/edit-task/${index}`, method="post")
+      input(type="text", name="text", value=task.text, placeholder="Task Text", required)
+      input(type="date", name="date", value=task.date, required)
+      button.add(type="submit") Save Changes

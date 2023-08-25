@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet" href="/style/style.css")
+  body
+    header
+      nav
+        a.logo(href="/") tsk
+        ul
+          each link in navLinks
+            li
+              a(href=link.url)= link.name
+    main
+      block content
+

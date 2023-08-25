@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content
+  .form
+    h1 New Task
+    form(action="/add-task", method="post")
+      label(for="taskText") Enter the task 
+      input(type="text",id="taskText", name="text", placeholder="Task Text", required)
+      label(for="taskDate") Enter the date of task 
+      input(type="date",id="taskDate", name="date", required)
+      button.add(type="submit") Add Task
